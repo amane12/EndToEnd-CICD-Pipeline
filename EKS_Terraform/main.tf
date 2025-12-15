@@ -31,7 +31,7 @@ resource "aws_internet_gateway" "logging_igw" {
 }
 
 resource "aws_route_table" "logging_route_table" {
-  vpc_id = aws_vpc.logging.id
+  vpc_id = aws_vpc.logging_vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
